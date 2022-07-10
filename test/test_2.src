@@ -1,0 +1,1 @@
+def f(x,z) add(10,add(x,z)) end
