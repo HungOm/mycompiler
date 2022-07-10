@@ -1,11 +1,5 @@
 #!/usr/bin/env ruby
 require 'mycompiler'
-generated_code_1 =  MyCompiler.new(File.read('test/test_1.src')).compile
-generated_code_2 =  MyCompiler.new(File.read('test/test_2.src')).compile
-generated_code_3 =  MyCompiler.new(File.read('test/test_3.src')).compile
-# RUNTIME = "function add(a,b) { return a+b; }";
-# TEST =  "console.log(f(1,2));"
-# puts [RUNTIME,generated_code,TEST].join("\n")
-puts generated_code_1
-puts generated_code_2
-puts generated_code_3
+
+# ruby -Ilib ./bin/mycompiler ./test/test_1.src
+puts MyCompiler.new(File.read(ARGV[0])).compile
